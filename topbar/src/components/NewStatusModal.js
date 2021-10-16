@@ -21,33 +21,68 @@ const SetDateAndTime = ({ dateTime, setDateTime }) => {
   const [value, onChange] = useState(new Date())
   const [timevalue, timeChange] = useState("10:00")
 
-  return (
-    <>
-      <div className={styles.modal}>
-        <div className={styles.modalcontainer}>
-          <div className={styles.statustop}>
-            <p>Clear after</p>
-            <img
-              src={whitex}
-              alt=""
-              onClick={() => setDateTime(!dateTime)}
-              className={styles.whitex}
-            />
-          </div>
-          <form>
-            <div className={styles.dateSection}>
-              <label className={styles.dateLabel}>Date</label>
-              <DatePicker onChange={onChange} value={value} />
-            </div>
-            <div>
-              <label>Time</label>
-              <TimePicker onChange={timeChange} value={timevalue} />
-            </div>
-          </form>
+//   return (
+//     <>
+//       <div className={styles.modal}>
+//         <div className={styles.modalcontainer}>
+//           <div className={styles.statustop}>
+//             <p>Clear after</p>
+//             <img
+//               src={whitex}
+//               alt=""
+//               onClick={() => setDateTime(!dateTime)}
+//               className={styles.whitex}
+//             />
+//           </div>
+//           <form>
+//             <div className={styles.dateSection}>
+//               <label className={styles.dateLabel}>Date</label>
+//               <DatePicker onChange={onChange} value={value} />
+//             </div>
+//             <div>
+//               <label>Time</label>
+//               <TimePicker onChange={timeChange} value={timevalue} />
+//             </div>
+//           </form>
+//         </div>
+//       </div>
+//     </>
+//   )
+// }
+
+
+
+
+
+
+
+return (
+  <>
+    <div className={styles.modal}>
+      <div className={styles.modalcontainer}>
+        <div className={styles.statustop}>
+          <p>Clear after</p>
+          <img
+            src={whitex}
+            alt=""
+            onClick={() => setDateTime(!dateTime)}
+            className={styles.whitex}
+          />
         </div>
+        <form>
+          <div className={styles.dateSection}>
+            <label className={styles.dateLabel}>Date</label>
+            <DatePicker onChange={onChange} value={value} />
+          </div>
+          <div>
+            <label>Time</label>
+            <TimePicker onChange={timeChange} value={timevalue} />
+          </div>
+        </form>
       </div>
-    </>
-  )
+    </div>
+  </>
+)
 }
 
 const SetStatusModal = ({
@@ -317,7 +352,41 @@ const SetStatusModal = ({
                     </ReactTooltip>
                   </div>
                 )}
-                {statusHistory[1] && (
+                {/* {statusHistory[1] && (
+                  <div className={styles.recentstatustile}>
+                    <div
+                      onClick={() => {
+                        onSelectRecent(statusHistory[1])
+                      }}
+                      className={styles.recentstatustileleft}
+                    >
+                      <span>{statusHistory[1].tag_history}</span>&nbsp;&nbsp;
+                      <span className={styles.recentstatustext}>
+                        {statusHistory[1].text_history}
+                      </span>
+                      &nbsp;&nbsp;
+                      <span>-</span>&nbsp;&nbsp;
+                      <span>
+                        {expiryTimeLabel[statusHistory[1].expiry_history]}
+                      </span>
+                    </div>
+                    <div
+                      data-tip
+                      data-for="deleteRecent"
+                      className={styles.recentstatustileiconwrapper}
+                    >
+                      <FaRegTimesCircle
+                        className={styles.recentstatustileicon}
+                      />
+                    </div>
+                    <ReactTooltip id="deleteRecent" type="dark" effect="solid">
+                      <span>Delete</span>
+                    </ReactTooltip>
+                  </div>
+                )} */}
+
+
+{statusHistory[1] && (
                   <div className={styles.recentstatustile}>
                     <div
                       onClick={() => {
