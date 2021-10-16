@@ -139,6 +139,31 @@ const TopbarModal = ({ members, statusModal, setStatusModal }) => {
   const [pause, setPause] = useState(false)
   // console.log(user)
 
+  // var userAppearance = null
+  // var toggleAppearance = null
+
+  // switch (presence) {
+  //   case "true":
+  //     userAppearance = "Set yourself as away"
+  //     toggleAppearance = (
+  //       <div className={styles.online}>
+  //         <span className={styles.activeCircle} />
+  //         <span className={styles.active}> Active </span>
+  //       </div>
+  //     )
+  //     break
+  //   default:
+  //     userAppearance = "Set yourself as active"
+  //     toggleAppearance = (
+  //       <div className={styles.online}>
+  //         <div className={styles.awayCircle} />
+  //         <p className={styles.away}>Away </p>
+  //       </div>
+  //     )
+  // }
+
+
+
   var userAppearance = null
   var toggleAppearance = null
 
@@ -277,7 +302,49 @@ const TopbarModal = ({ members, statusModal, setStatusModal }) => {
 
             <hr className={styles.hr} />
 
-            <div className={styles.sectionFour}>
+            {/* <div className={styles.sectionFour}>
+              <p
+                onClick={() => {
+                  setReusableModal("edit profile")
+                  toggleModalState()
+                }}
+              >
+                Edit profile
+              </p>
+              <p
+                onClick={() => {
+                  toggleProfileState()
+                  openModal()
+                }}
+              >
+                View profile
+              </p>
+              <p
+                onClick={() => {
+                  setReusableModal("preference")
+                  toggleModalState()
+                }}
+              >
+                Preferences
+              </p>
+            </div>
+
+            <hr className={styles.hr} />
+
+            <div className={styles.sectionSix}>
+              <p
+                onClick={() => {
+                  setReusableModal("downloads")
+                }}
+              >
+                Downloads
+              </p>
+            </div> */}
+
+
+
+
+<div className={styles.sectionFour}>
               <p
                 onClick={() => {
                   setReusableModal("edit profile")
