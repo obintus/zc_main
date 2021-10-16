@@ -139,10 +139,8 @@ const SetStatusModal = ({
         status_history: [...user.status.status_history]
       }
     })
-
     setStatusText("")
     setStatusEmoji("")
-
     try {
       const res = await authAxios.patch(
         `/organizations/${orgId}/members/${user._id}/status`,
@@ -165,6 +163,8 @@ const SetStatusModal = ({
     setStatusText(selectedRecent.text_history)
     setChoosePeriod(selectedRecent.expiry_history)
   }
+
+
 
   const onRemoveRecent = recentText => {
     setUser({
@@ -306,6 +306,8 @@ const SetStatusModal = ({
                         onRemoveRecent(statusHistory[0].text_history)
                       }}
                     >
+                     
+
                       <FaRegTimesCircle
                         className={styles.recentstatustileicon}
                       />
@@ -443,6 +445,8 @@ const SetStatusModal = ({
                     </ReactTooltip>
                   </div>
                 )}
+                
+
                 <DefaultStatus
                   chosenStatus={chosenStatus}
                   setChosenStatus={setChosenStatus}
@@ -467,6 +471,7 @@ const SetStatusModal = ({
                 </div>
                 {dateTime ? (
                   <div className={styles.datetime}>
+
                     <input
                       type="date"
                       className={styles.date}
@@ -555,6 +560,8 @@ const SetStatusModal = ({
             <span className={styles.inactivesave}>Save</span>
           )}
       </div>
+     
+
       <div
         className={styles.modalback}
         onClick={() => setStatusModal(!statusModal)}
